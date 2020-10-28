@@ -4,7 +4,7 @@
     "description": "This is my first news app built using node.js",
     "main": "index.js",
     "scripts": {
-        "test": "test"
+        "start": "node server.js"
     },
     "author": "Bassem Elshafie",
     "license": "ISC",

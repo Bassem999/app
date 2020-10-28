@@ -4,21 +4,10 @@ const bodyParser = require("body-parser");
 const app = express();
 const path = require("path");
 const fs = require("fs");
-const mongodb = require("mongodb");
-const MongoClient = mongodb.MongoClient
-    // serving static files
 app.use(express.static(path.join(__dirname, "public")));
 app.use(bodyParser.urlencoded({ extended: false }));
 // connecting to Mongodb
-var url = "mongodb://localhost:27017/news";
-MongoClient.connect(url, { useUnifiedTopology: true }, function(err, db) {
-    if (err) throw err;
-    var dbo = db.db('news');
-    dbo.collection('posts').find({}).toArray((err, result) => {
-        if (err) throw err;
-        db.close();
-    })
-});
+
 // Creating Routes
 app.get("/", (req, res) => res.sendFile(__dirname + "/public/index.html"));
 
