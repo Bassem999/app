@@ -1,0 +1,17 @@
+{
+    "name": "news_app",
+    "version": "1.0.0",
+    "description": "This is my first news app built using node.js",
+    "main": "index.js",
+    "scripts": {
+        "test": "test"
+    },
+    "author": "Bassem Elshafie",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1",
+        "mongodb": "^3.6.2",
+        "nodemon": "^2.0.4",
+        "pug": "^3.0.0"
+    }
+}

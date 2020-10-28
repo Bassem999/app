@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="shortcut icon" type="image/png" href="images/education.svg" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!--Start Header Area-->
+    <header>
+        <!--Start Top Bar-->
+        <div class="top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm text-sm-left">
+                        <i class="fa fa-phone-alt"></i> 01158587480 &nbsp; &nbsp;<i class="far fa-envelope"></i> elshafie26@gmail.com
+                    </div>
+                    <div class="col-sm text-sm-right">
+                        Let's work together
+                        <span class="quote">Get Quote</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Top Bar-->
+        <!--Start nav Bar-->
+        <nav class="navbar navbar-expand-md navbar-light container">
+            <a class="navbar-brand" href="/">
+                <span>Elite</span><span>Corp</span>
+            </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--End nav Bar-->
+    </header>
+    <!--End Header Area-->
+
+    <main id="app">
+        <!--Start Carousel-->
+        <div id="carouselId" class="carousel slide top-slider" :style="{ height: sliderH+'px'}" data-ride="carousel">
+            <div class="carousel-inner d-flex align-items-center" role="listbox">
+                <h1>
+                    We Are Independent <br /> Design & <span>Development</span> <br /> Agency
+                </h1>
+                <div class="overlay"></div>
+                <div class="carousel-item active" :style="{ height: sliderH+'px'}"></div>
+                <div class="carousel-item" :style="{ height: sliderH+'px'}"></div>
+                <div class="carousel-item" :style="{ height: sliderH+'px'}"></div>
+            </div>
+            <ol class="carousel-indicators">
+                <li data-target="#carouselId" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselId" data-slide-to="1"></li>
+                <li data-target="#carouselId" data-slide-to="2"></li>
+            </ol>
+        </div>
+        <!--End Carousel-->
+        <!--Start Features-->
+        <div class="features mt-5">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-sm-6 col-lg-3 rounded-circle">
+                        <i class="fa fa-home fa-fw fa-2x"></i>
+                        <h3>Great Idea</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores iusto, quia in eligendi est earum pariatur aut, harum quos autem ullam et omnis.
+                        </p>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 rounded-circle">
+                        <i class="fa fa-home fa-fw fa-2x"></i>
+                        <h3>Great Idea</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores iusto, quia in eligendi est earum pariatur aut, harum quos autem ullam et omnis.
+                        </p>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 rounded-circle">
+                        <i class="fa fa-home fa-fw fa-2x"></i>
+                        <h3>Great Idea</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores iusto, quia in eligendi est earum pariatur aut, harum quos autem ullam et omnis.
+                        </p>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 rounded-circle">
+                        <i class="fa fa-home fa-fw fa-2x"></i>
+                        <h3>Great Idea</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores iusto, quia in eligendi est earum pariatur aut, harum quos autem ullam et omnis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Features-->
+        <!--Start Overview-->
+        <div class="overview text-center">
+            <div class="container">
+                <h2>Company Overview</h2>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus pariatur porro facilis corrupti praesentium! Molestiae nesciunt ex placeat corporis ad maiores. Tempore a autem veniam, ducimus vitae quidem! Saepe, dolor?
+                </p>
+                <h4>Let's Start Today</h4>
+                <button>View More</button>
+            </div>
+        </div>
+        <!--End Overview-->
+        <!--Start Featured Work-->
+        <div class="featured-work text-center mt-5">
+            <div class="container">
+                <h2>Featured Work</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic fugiat excepturi officia magni doloremque, fugit quidem sint earum explicabo ipsum voluptates tempora libero
+                </p>
+                <ul class="row mt-5 p-0">
+                    <li @click="active =!active" :class="['col-md', 'mr-md-3', {active}]">
+                        All
+                    </li>
+                    <li @click="click()" :class="['col-md', 'mr-md-3', {active}]">
+                        Websites
+                    </li>
+                    <li @click="active =!active" :class="['col-md', 'mr-md-3', {active}]">
+                        Logos
+                    </li>
+                    <li @click="active =!active" :class="['col-md', 'mr-md-3', {active}]">
+                        Graphic
+                    </li>
+                    <li @click="active =!active" :class="['col-md', 'mr-md-3', {active}]">
+                        Marketing
+                    </li>
+                    <li @click="active =!active" :class="['col-md', 'mr-md-3', {active}]">
+                        Videos
+                    </li>
+                </ul>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 websites">
+                        <div class="overlay"><i class="fa fa-expand fa-4x"></i></div>
+                        <img src="./images/img_1.jpg" alt="" />
+                    </div>
+                    <div class="col-md-3 websites">
+                        <div class="overlay"><i class="fa fa-expand fa-4x"></i></div>
+                        <img src="./images/img_2.jpg" alt="" />
+                    </div>
+                    <div class="col-md-3 logos">
+                        <div class="overlay"><i class="fa fa-expand fa-4x"></i></div>
+                        <img src="./images/img_3.jpg" alt="" />
+                    </div>
+                    <div class="col-md-3 logos">
+                        <div class="overlay"><i class="fa fa-expand fa-4x"></i></div>
+                        <img src="./images/img_4.jpg" alt="" />
+                    </div>
+                    <div class="col-md-3 graphic">
+                        <div class="overlay"><i class="fa fa-expand fa-4x"></i></div>
+                        <img src="./images/img_5.jpg" alt="" />
+                    </div>
+                    <div class="col-md-3 marketing">
+                        <div class="overlay"><i class="fa fa-expand fa-4x"></i></div>
+                        <img src="./images/img_6.jpg" alt="" />
+                    </div>
+                    <div class="col-md-3 marketing">
+                        <div class="overlay"><i class="fa fa-expand fa-4x"></i></div>
+                        <img src="./images/img_7.jpg" alt="" />
+                    </div>
+                    <div class="col-md-3 videos">
+                        <div class="overlay"><i class="fa fa-expand fa-4x"></i></div>
+                        <img src="./images/img_8.jpg" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Featured Work-->
+        <!--Start Latest Posts-->
+        <div class="latest-post text-center mt-5">
+            <div class="container">
+                <h2>Latest Posts</h2>
+                <p class="p">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic fugiat excepturi officia magni doloremque, fugit quidem sint earum explicabo ipsum voluptates tempora libero
+                </p>
+                <div class="row mt-5 text-left">
+                    <div class="card-group">
+                        <div class="card mr-md-4 mb-5">
+                            <img class="card-img-top" height="230px" src="./images/img_5.jpg" alt="Card image cap" />
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                </h4>
+                                <h6 class="card-subtitle mt-2 mb-2">march, 7, 2020</h6>
+                                <p class="card-text text-muted">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam numquam, in rem maiores soluta voluptas maxime repellendus possimus odit ducimus!
+                                </p>
+                                <a href="#" class="card-link">Read More</a>
+                            </div>
+                        </div>
+                        <div class="card mr-md-4 mb-5">
+                            <img class="card-img-top" height="230px" src="./images/img_3.jpg" alt="Card image cap" />
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                </h4>
+                                <h6 class="card-subtitle mt-2 mb-2">march, 7, 2020</h6>
+                                <p class="card-text text-muted">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam numquam, in rem maiores soluta voluptas maxime repellendus possimus odit ducimus!
+                                </p>
+                                <a href="#" class="card-link">Read More</a>
+                            </div>
+                        </div>
+                        <div class="card mb-5">
+                            <img class="card-img-top" height="230px" src="./images/img_4.jpg" alt="Card image cap" />
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                </h4>
+                                <h6 class="card-subtitle mt-2 mb-2">march, 7, 2020</h6>
+                                <p class="card-text text-muted">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam numquam, in rem maiores soluta voluptas maxime repellendus possimus odit ducimus!
+                                </p>
+                                <a href="# " class="card-link">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Latest Posts-->
+        <!--Start Testimonials-->
+        <!--End Testimonials-->
+        <!--Pricing Table-->
+        <div class="pricing text-center pt-5">
+            <div class="container text-center">
+                <h2>Pricing Table</h2>
+                <p class="p">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic fugiat excepturi officia magni doloremque, fugit quidem sint earum explicabo ipsum voluptates tempora libero
+                </p>
+                <div class="mt-5">
+                    <div class="card-group">
+                        <div class="card mr-md-4 mb-5">
+                            <div class="card-body">
+                                <h4 class="card-title">Small Business</h4>
+                                <h6 class="card-subtitle mt-2 mb-2 text-muted">
+                                    Lorem Ipsum
+                                </h6>
+                                <p class="card-text">$99/<span>year</span></p>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Lorem</li>
+                                    <li class="list-group-item">Lorem</li>
+                                    <li class="list-group-item">Lorem</li>
+                                    <li class="list-group-item">Lorem</li>
+                                    <li class="list-group-item">Lorem</li>
+                                </ul>
+                                <a href="#" class="card-link">Read More</a>
+                            </div>
+                        </div>
+                        <div class="card mr-md-4 mb-5">
+                            <div class="card-body corporate">
+                                <h4 class="card-title">Corporate</h4>
+                                <h6 class="card-subtitle mt-2 mb-2 text-muted">
+                                    Lorem Ipsum
+                                </h6>
+                                <p class="card-text">$199/<span>year</span></p>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Lorem</li>
+                                    <li class="list-group-item">Lorem</li>
+                                    <li class="list-group-item">Lorem</li>
+                                    <li class="list-group-item">Lorem</li>
+                                    <li class="list-group-item">Lorem</li>
+                                </ul>
+                                <a href="#" class="card-link">Read More</a>
+                            </div>
+                        </div>
+                        <div class="card mb-5">
+                            <div class="card-body">
+                                <h4 class="card-title">Enterprise</h4>
+                                <h6 class="card-subtitle mt-2 mb-2 text-muted">
+                                    Lorem Ipsum
+                                </h6>
+                                <p class="card-text">$299/<span>year</span></p>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Lorem</li>
+                                    <li class="list-group-item">Lorem</li>
+                                    <li class="list-group-item">Lorem</li>
+                                    <li class="list-group-item">Lorem</li>
+                                    <li class="list-group-item">Lorem</li>
+                                </ul>
+                                <a href="# " class="card-link">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Pricing Table-->
+        <!--Start Why Choose Us-->
+        <div class="choose-us">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="./images/img_2.jpg" />
+                    </div>
+                    <div class="col-md-6">
+                        <h1>Why Choose Us</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum sunt minus nulla qui inventore. Perspiciatis nulla optio eum dolor quaerat debitis ad, non quidem nihil facere a hic quasi quo? l
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga sit doloribus voluptatem, nostrum temporibus fugit doloremque at reprehenderit nam illum necessitatibus iure velit officiis quae nesciunt ipsum omnis veritatis mollitia.
+                        </p>
+                        <a href="#">read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Why Choose Us-->
+        <!--Start Statistic Section-->
+        <div class="statistics">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-6 col-lg-3">
+                        <i class="fa fa-user fa-4x fa-fw"></i>
+                        <span>624</span>
+                        <p>Happy Clients</p>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <i class="fa fa-heart fa-4x fa-fw"></i>
+                        <span>112</span>
+                        <p>Amazing Tours</p>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <i class="fa fa-briefcase fa-4x fa-fw"></i>
+                        <span>595</span>
+                        <p>Partners</p>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <i class="fa fa-comment fa-4x fa-fw"></i>
+                        <span>09</span>
+                        <p>Question Answered</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Statistic Section-->
+        <!--Start Contact Us-->
+        <div class="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md left">
+                        <p>You Think We Are Cool? Let's Work Together</p>
+                    </div>
+                    <div class="col-md text-right">
+                        <a href="/contact">Contact us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Contact Us-->
+        <!--Start Footer-->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 site-info">
+                        <h2><span>Elite</span><span>Corp</span></h2>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis eum dolorem consequatur suscipit obcaecati alias non, laboriosam quod necessitatibus, eaque dolore saepe similique dolores quibusdam inventore corrupti porro, est placeat!
+                        </p>
+                        <a href="#">Read More</a>
+                    </div>
+                    <div class="col-md-3 helpful-links">
+                        <h3>Helpful Links</h3>
+                        <div class="row">
+                            <div class="col">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-chevron-right"></i> About</a></li>
+                                    <li><a href="#"><i class="fa fa-chevron-right"></i> Portfolio</a></li>
+                                    <li><a href="#"><i class="fa fa-chevron-right"></i> Team</a></li>
+                                    <li><a href="#"><i class="fa fa-chevron-right"></i> Pricing</a></li>
+                                    <li><a href="#"><i class="fa fa-chevron-right"></i> Privacy Policy</a></li>
+                                </ul>
+                            </div>
+                            <div class="col">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-chevron-right"></i> FAQ</a></li>
+                                    <li><a href="#"><i class="fa fa-chevron-right"></i> Blog</a></li>
+                                    <li><a href="#"><i class="fa fa-chevron-right"></i> How It Works</a></li>
+                                    <li><a href="#"><i class="fa fa-chevron-right"></i> Benefits</a></li>
+                                    <li><a href="/contact"><i class="fa fa-chevron-right"></i> Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 contact-us">
+                        <h3>Contact Us</h3>
+                        <ul>
+                            <li>
+                                <address>54958 Levo Road Near Red Forest,US</address>
+                            </li>
+                            <li>Phone: 01158587480</li>
+                            <li>E-mail: <a href="mailto:@Elshafie26@gmail.com?subject=contact">elshafie26@gmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--End Footer-->
+        <!--Start CopyRight-->
+        <div class="copyright">
+            <div class="container">
+                <div class="row pt-5 pb-5">
+                    <div class="col-md mb-3 text-uppercase">
+                        copyright<sup>&copy;</sup>2020
+                        <h6 class="text-capitalize"> Elite<span>Corp</span></h6> all rights reserved
+                    </div>
+                    <div class="col-md">
+                        <ul class="list-unstyled p-0 m-0 float-md-right">
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-facebook fa-fw"></i>
+                                </a>
+                            </li>
+                            <li class="ml-2">
+                                <a href="#"> <i class="fab fa-twitter fa-fw"></i></a>
+                            </li>
+                            <li class="ml-2">
+                                <a href="#">
+                                    <i class="fab fa-youtube fa-fw"></i>
+                                </a>
+                            </li>
+                            <li class="ml-2">
+                                <a href="#"><i class="fab fa-facebook-messenger fa-fw"></i>
+                                </a>
+                            </li>
+                            <li class="ml-2">
+                                <a href="#"><i class="fab fa-whatsapp fa-fw"></i>
+                                </a>
+                            </li>
+                            <li class="ml-2">
+                                <a href="#"><i class="fab fa-instagram fa-fw"></i>
+                                </a>
+                            </li>
+                            <li class="ml-2">
+                                <a href="#"><i class="fab fa-twitch fa-fw"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End CopyRight-->
+    </main>
+    <script src="js/bootstrap.min.js "></script>
+    <script src="js/vue.js"></script>
+    <script src="js/main.js "></script>
+</body>
+
+</html>
+
+</html>
